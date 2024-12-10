@@ -1,0 +1,20 @@
+{
+    "name": "jobrouter/sdk",
+    "version": "2024.1.14",
+    "description": "JobRouter SDK interfaces for IDE autocompletion",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "sdk.php"
+        ]
+    },
+    "config": {
+        "platform": {
+            "php": "8.1.11"
+        }
+    },
+    "scripts": {
+        "version-bump": "php version-bump.php"
+    }
+}
