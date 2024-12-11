@@ -32,8 +32,8 @@ return function (ConnectionManagerInterface $connectionManager): void {
                 'version' => 1,
             ],
             [
-                ResultInterface::TYPE_TEXT,
-                ResultInterface::TYPE_INTEGER,
+                'text',
+                'integer',
             ],
         );
 
