@@ -2,7 +2,6 @@
 
 use Doctrine\DBAL\Exception;
 use JobRouter\Sdk\ConnectionManagerInterface;
-use JobRouter\Sdk\ResultInterface;
 
 return function (ConnectionManagerInterface $connectionManager): void {
     echo '<h1 style="color: #fc0">SDK Example to demonstrate the ConnectionManagerInterface and JobDBInterface!</h1>';

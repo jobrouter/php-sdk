@@ -145,21 +145,6 @@ namespace JobRouter\Sdk {
             /** Data indexed numerically by column order. */
             public const MODE_ORDERED = 1;
 
-            /* Parameter type clob (character large object) */
-            public const TYPE_CLOB = 'clob';
-
-            /* Parameter type timestamp (date and time value) */
-            public const TYPE_DATETIME = 'timestamp';
-
-            /* Parameter type decimal (fixed-precision value) */
-            public const TYPE_DECIMAL = 'decimal';
-
-            /* Parameter type integer (whole numbers that range from -2,147,483,647 to 2,147,483,647) */
-            public const TYPE_INTEGER = 'integer';
-
-            /* Parameter type text (textual data) */
-            public const TYPE_TEXT = 'text';
-
             /**
              * Fetches all rows from the query.
              *
