@@ -1,0 +1,29 @@
+{% if not authorized.error %}
+    <h3 style="color: #59aa6e;">Logged-in User is "{{ authorized.userName }}"!</h3>
+    <pre>UserName: {{ authorized.userName }}</pre>
+    <pre>Current User PreName: {{ authorized.preName }}</pre>
+    <pre>Current User LastName: {{ authorized.lastName }}</pre>
+    <pre>Current User FullName: {{ authorized.fullName }}</pre>
+    <pre>Current User Email: {{ authorized.email }}</pre>
+    <pre>Current User UserDefined1: {{ authorized.userDefined1 }}</pre>
+    <pre>Current User UserDefined2: {{ authorized.userDefined2 }}</pre>
+    <pre>Current User UserDefined3: {{ authorized.userDefined3 }}</pre>
+    <pre>Current User UserDefined4: {{ authorized.userDefined4 }}</pre>
+    <pre>Current User UserDefined5: {{ authorized.userDefined5 }}</pre>
+    <pre>Current User Supervisor: {{ authorized.supervisor }}</pre>
+    <pre>Current User Department: {{ authorized.department }}</pre>
+    <pre>Current User Phone: {{ authorized.phone }}</pre>
+    <pre>Current User Fax: {{ authorized.fax }}</pre>
+    <pre>Current User Language: {{ authorized.language }}</pre>
+    <pre>Current User DateFormat: {{ authorized.dateFormat }}</pre>
+    <pre>Current User DecimalSeparator: {{ authorized.decimalSeparator }}</pre>
+    <pre>Current User ThousandsSeparator: {{ authorized.thousandsSeparator }}</pre>
+    <pre>Current User Timezone: {{ authorized.timezone }}</pre>
+    <pre>Current User JobFunctions: {{ authorized.jobFunctions|join(',') }}</pre>
+    <pre>User Is in JobFunction: {{ authorized.inJobFunctions }}</pre>
+    <pre>Current User UserProfile: {{ authorized.userProfile }}</pre>
+    <pre>Current User AvatarUrl: {{ authorized.avatarUrl }}</pre>
+    <img src="/{{ authorized.avatarUrl }}" width="100"/>
+{% else %}
+    <h3 style="color: #f44;">You are currently not logged in to JobRouter!</h3>;
+{% endif %}

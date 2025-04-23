@@ -41,6 +41,7 @@ namespace JobRouter\Authentication {
 }
 
 namespace JobRouter\Sdk {
+
     if (false) {
         interface ConnectionManagerInterface
         {
@@ -602,6 +603,76 @@ namespace JobRouter\Sdk {
              * @throws \NoInstanceFoundException
              */
             public function getCurrentUser(): \JobRouter\Sdk\UserInterface;
+        }
+    }
+}
+
+namespace JobRouter\Sdk\Template {
+
+    if (false) {
+        interface TwigRendererInterface
+        {
+            /**
+             * Disables the auto_reload option.
+             */
+            public function disableAutoReload(): void;
+
+            /**
+             * Enables the auto_reload option.
+             *
+             * <b>Important:</b>
+             * This method allows you to make changes to the Twig template during development without clearing the
+             * cache. Using this method will cause Twig to regenerate the template again.
+             *
+             * So be careful!
+             */
+            public function enableAutoReload(): void;
+
+            /**
+             * Enables the strict_variables option.
+             */
+            public function enableStrictVariables(): void;
+
+            /**
+             * Disables the strict_variables option.
+             */
+            public function disableStrictVariables(): void;
+
+            /**
+             * Set the absolute template cache path.
+             *
+             * <b>Important:</b>
+             * It is important that this method is executed after calling enableAutoReload(), otherwise the
+             * revalidation / recompilation of the template will not take effect.
+             *
+             * This is only necessary if you want to separate the cache folder from JobRouter. By default, the template
+             * cache path is located under \<jobrouter-path\>/cache/symfony/prod/twig
+             *
+             * @param string $path The absolute path to the compiled templates
+             */
+            public function setTemplateCachePath(string $path): void;
+
+            /**
+             * Set paths where to look for templates
+             *
+             * @param string|array $paths A path or an array of paths where to look for templates
+             * @param string|null $rootPath The root path common to all relative paths (null for getcwd())
+             *
+             * @throws \Twig\Error\LoaderError When the template path cannot be found
+             */
+            public function setTemplatePath(string|array $paths = [], ?string $rootPath = null): void;
+
+            /**
+             * Renders a template.
+             *
+             * @param string $fileName The template file name
+             * @param array $context The optional template variables
+             *
+             * @throws \Twig\Error\LoaderError When the template cannot be found
+             * @throws \Twig\Error\SyntaxError When an error occurred during compilation
+             * @throws \Twig\Error\RuntimeError When an error occurred during rendering
+             */
+            public function render(string $fileName, array $context = []): string;
         }
     }
 }
