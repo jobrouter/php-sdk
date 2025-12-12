@@ -20,7 +20,7 @@ return function (UserManagerInterface $userInterface): void {
         echo '<pre>FullName: ' . print_r($fullName, true) . '</pre>';
         echo '<pre>In JobFunctions (Administrator): ' . print_r($inJobFunction, true) . '</pre>';
 
-    } catch (\NoInstanceFoundException $e) {
+    } catch (\JobRouterException $e) {
         echo '<h3 style="color: #f44;">The user is not authenticated!</h3>';
         echo '<h3 style="color: #f44;">' . $e->getMessage() . '</h3>';
     }
