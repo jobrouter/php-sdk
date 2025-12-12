@@ -17,7 +17,7 @@ return function (UserManagerInterface $userInterface): void {
         // Do something with the $userByName
         $userAvatarUrl = $userByName->getAvatarUrl();
         // Do something with $userAvatarUrl
-    } catch (\NoInstanceFoundException $e) {
+    } catch (\JobRouterException $e) {
         echo '<h3 style="color: #f44;">The user does not exist!</h3>';
         echo '<h3 style="color: #f44;">' . $e->getMessage() . '</h3>';
     }
