@@ -1,6 +1,6 @@
 {
     "name": "jobrouter/sdk",
-    "version": "2025.1.21-beta.1",
+    "version": "2025.1.21-stable",
     "description": "JobRouter SDK interfaces for IDE autocompletion",
     "type": "library",
     "license": "MIT",
